@@ -13,7 +13,7 @@ const headerNav = [
     path: '/movie',
   },
   {
-    display: 'TV Series',
+    display: 'TV',
     path: '/tv',
   },
 ];
@@ -44,8 +44,8 @@ const Header = () => {
     <div ref={headerRef} className="header">
       <div className="header__wrap container">
         <div className="logo">
-          <img src={logo} alt=" " />
-          <Link to="/">SQMovie</Link>
+          <img src={logo} alt=" logo" />
+          <Link to="/">SQplay</Link>
         </div>
 
         <ul className="header__nav">

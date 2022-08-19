@@ -22,6 +22,15 @@
       @include mobile {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      a {
+        @include flex(center, unset);
+      }
+
+      i {
+        font-size: 2rem;
+        margin-right: 10px;
+      }
     }
 
     &__menu {
