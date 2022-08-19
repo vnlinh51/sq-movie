@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+
 import './modal.scss';
 
 const Modal = (props) => {
@@ -14,11 +14,6 @@ const Modal = (props) => {
       {props.children}
     </div>
   );
-};
-
-Modal.propTypes = {
-  active: PropTypes.bool,
-  id: PropTypes.string,
 };
 
 export const ModalContent = (props) => {
@@ -37,10 +32,6 @@ export const ModalContent = (props) => {
       </div>
     </div>
   );
-};
-
-ModalContent.propTypes = {
-  onClose: PropTypes.func,
 };
 
 export default Modal;

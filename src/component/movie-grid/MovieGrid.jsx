@@ -44,7 +44,6 @@ const MovieGrid = (props) => {
   // =============== Load More ===============
   const loadMore = async () => {
     let response = null;
-    // console.log('keyword', keyword);
     if (keyword === undefined) {
       const params = {
         page: page + 1,
@@ -64,12 +63,9 @@ const MovieGrid = (props) => {
       };
       response = await tmdbApi.search(props.category, { params });
     }
-    // console.log('loadmore click');
     setItems([...items, ...response.results]);
     setPage(page + 1);
   };
-
-  // console.log(page, totalPage);
 
   return (
     <>
@@ -121,8 +117,6 @@ const MovieSearch = (props) => {
       document.removeEventListener('keyup', enterEvent);
     };
   }, [keyword, goToSearch]);
-
-  // console.log('keyword', keyword);
 
   return (
     <div className="movie-search">

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './button.scss';
 
@@ -23,10 +22,6 @@ export const OutlineButton = (props) => {
       {props.children}
     </Button>
   );
-};
-
-Button.propTypes = {
-  onclick: PropTypes.func,
 };
 
 export default Button;

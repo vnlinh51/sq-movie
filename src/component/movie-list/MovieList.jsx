@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import { Link } from 'react-router-dom';
-
-import Button from '../button/Button';
 import tmdbApi, { category } from '../../api/tmdbApi';
-import apiConfig from '../../api/apiConfig';
 import './movie-list.scss';
 
 import MovieCard from '../movie-card/MovieCard';
@@ -17,7 +12,6 @@ const MovieList = (props) => {
     const getList = async () => {
       let response = null;
       const params = {};
-      //
 
       if (props.type !== 'similar') {
         switch (props.category) {
@@ -35,7 +29,7 @@ const MovieList = (props) => {
     };
 
     getList();
-  }, []);
+  });
 
   return (
     <div className="movie-list">
@@ -48,11 +42,6 @@ const MovieList = (props) => {
       </Swiper>
     </div>
   );
-};
-
-MovieList.propTypes = {
-  category: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
 };
 
 export default MovieList;

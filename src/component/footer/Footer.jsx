@@ -19,16 +19,16 @@ const Footer = () => {
         <div className="footer__content__menus">
           <div className="footer__content__menu">
             <Link to={'/'}>
-              <i class="bx bxl-facebook-square" style={{}}></i> Facebook
+              <i className="bx bxl-facebook-square" style={{}}></i> Facebook
             </Link>
             <Link to={'/'}>
-              <i class="bx bxl-instagram"></i> Instagram
+              <i className="bx bxl-instagram"></i> Instagram
             </Link>
             <Link to={'/'}>
-              <i class="bx bxl-twitter"></i> Twitter
+              <i className="bx bxl-twitter"></i> Twitter
             </Link>
             <Link to={'/'}>
-              <i class="bx bxl-youtube"></i> Youtube
+              <i className="bx bxl-youtube"></i> Youtube
             </Link>
           </div>
           <div className="footer__content__menu">

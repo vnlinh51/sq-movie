@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import SwiperCore, { Autoplay } from 'swiper';
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,7 +24,6 @@ const HeroSlide = () => {
       try {
         const response = await tmdbApi.getMoviesList(movieType.popular, { params });
         setMovieItems(response.results.slice(0, 4));
-        // console.log(response);
       } catch {
         console.log('error');
       }
@@ -35,11 +34,13 @@ const HeroSlide = () => {
   return (
     <div className="hero-slide">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={1}
+        navigation
         grabCursor={true}
         spaceBetween={0}
-        slidesPerView={1}
-        // autoplay={{ delay: 3000 }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
       >
         {movieItems.map((item, index) => (
           <SwiperSlide key={index}>

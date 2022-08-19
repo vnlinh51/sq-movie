@@ -11,12 +11,19 @@ const MovieCard = (props) => {
   const link = '/' + category[props.category] + '/' + item.id;
   const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
 
+  const vote = item.vote_average;
+  // console.log(vote.toFixed(1));
+
   return (
     <Link to={link}>
       <div className="movie-card" style={{ backgroundImage: `url(${bg})` }}>
         <Button>
           <i className="bx bx-play"></i>
         </Button>
+        <div className="imdb__icon">
+          <i className="bx bxl-imdb"></i>
+          <h3>{vote.toFixed(1)}</h3>
+        </div>
       </div>
       <h3>{item.title || item.name}</h3>
     </Link>

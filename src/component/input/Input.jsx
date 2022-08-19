@@ -1,7 +1,8 @@
 import React from 'react';
 
 import './input.scss';
-const input = (props) => {
+
+const Input = (props) => {
   return (
     <input
       type={props.type}
@@ -12,4 +13,4 @@ const input = (props) => {
   );
 };
 
-export default input;
+export default Input;
