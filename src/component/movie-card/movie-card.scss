@@ -58,24 +58,27 @@
 }
 
 .imdb__icon {
-  color: rgb(207, 76, 76);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 8px;
+  right: 10px;
+  // transform: translateX(-50%);
 
-  transform: translateX(-50%);
-  background-color: #ffffff;
-  margin: 0 2px;
-  border-radius: 5px;
-  padding: 1px 3px;
-  @include flex(center, center);
+  background-color: #5179ff;
+  // margin: 0 2px;
+  border-radius: 15px;
+  padding: 1px 8px;
+  @include flex(center, unset);
 
   i {
-    color: rgb(201, 17, 17);
-    font-size: 2.5rem;
+    // color: rgb(201, 17, 17);
+    // font-size: 1.2rem;
+    margin-bottom: 2px;
   }
   h3 {
-    font-weight: 900;
+    font-size: 1rem;
+    // font-weight: 700;
     text-shadow: 1px 1px 10px rgb(177, 177, 177);
   }
 }

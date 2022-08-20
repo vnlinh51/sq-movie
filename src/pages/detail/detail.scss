@@ -89,6 +89,14 @@
   }
 }
 
+.btn__play {
+  opacity: 0.9;
+}
+
+.btn__play:hover {
+  opacity: 1;
+}
+
 .casts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));

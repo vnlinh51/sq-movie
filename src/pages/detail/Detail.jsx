@@ -7,6 +7,7 @@ import './detail.scss';
 import CastList from './CastList';
 import VideoList from './VideoList';
 import MovieList from '../../component/movie-list/MovieList';
+import Button from '../../component/button/Button';
 
 const Detail = () => {
   const { category, id } = useParams();
@@ -57,6 +58,10 @@ const Detail = () => {
                   ))}
               </div>
 
+              <div className="btn__play">
+                <Button onClick={() => MoviePlay(item.id)}>Watch online</Button>
+              </div>
+
               <p className="overview"> {item.overview}</p>
 
               <div className="cast">
@@ -67,6 +72,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
+
           <div className="container">
             <div className="section mb-3">
               <VideoList id={item.id} />
@@ -82,6 +88,11 @@ const Detail = () => {
       )}
     </>
   );
+};
+
+const MoviePlay = (id) => {
+  const urlStream = `https://www.2embed.to/embed/tmdb/movie?id=${id}`;
+  return window.open(urlStream, '_blank', 'noopener,noreferrer');
 };
 
 export default Detail;
