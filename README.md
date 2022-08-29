@@ -31,8 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Main technology used
 - ReactJS, SCSS
-- React-Query, Axios
-- Swiper
+- Axios, Swiper
 
 
 
